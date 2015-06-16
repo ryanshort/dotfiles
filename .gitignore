@@ -12,3 +12,9 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+# vim temporary files
+.netrwhist
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+.vim/bundle

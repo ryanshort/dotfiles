@@ -1,9 +1,35 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-" Use 14pt Monaco
-set guifont=Monaco:h14
-" Don’t blink cursor in normal mode
-set guicursor=n:blinkon0
-" Better line-height
-set linespace=8
+" set default window size
+set lines=57
+set columns=90
+"
+" GVIM for Windows options
+"
+if has("gui_win32")
+    " set default font used for GUI Vim
+    set guifont=Sauce\ Code\ Powerline:h10
+    " hide menu bar
+    set guioptions-=m
+    " hide tool bar
+    set guioptions-=T
+endif
+
+"
+" MacVIM options
+"
+if has("gui_macvim")
+    " set default font used for GUI Vim
+    set guifont=Sauce\ Code\ Powerline:h11
+endif
+
+" Options for all GUI VIM
+"
+" disable scroll bars
+set guioptions-=r
+set guioptions-=b
+set guioptions-=l
+set guioptions-=L
+
+" Ctrl+TAB for next tab
+noremap <C-Tab> :tabnext<CR>
+" Ctrl-Shift-Tab for previous tab
+noremap <C-S-Tab> :tabprev<CR>
