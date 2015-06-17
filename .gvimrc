@@ -1,6 +1,6 @@
 " set default window size
-set lines=57
-set columns=90
+set lines=56
+set columns=100
 "
 " GVIM for Windows options
 "
