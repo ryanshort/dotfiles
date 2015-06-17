@@ -18,7 +18,7 @@ endif
 "
 if has("gui_macvim")
     " set default font used for GUI Vim
-    set guifont=Sauce\ Code\ Powerline:h11
+    set guifont=Sauce\ Code\ Powerline:h12
 endif
 
 " Options for all GUI VIM
