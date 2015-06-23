@@ -10,6 +10,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'docunext/closetag.vim'
+Plugin 'rodjek/vim-puppet'
 call vundle#end()
 filetype plugin indent on
 
