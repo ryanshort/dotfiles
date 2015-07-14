@@ -39,5 +39,5 @@ noremap <left>  <nop>
 noremap <right> <nop>
 " allow saving of root files with :w!! when vim opened as user
 cmap w!! w !sudo tee % >/dev/null
-" overload <esc> key to clear search highlighting
-nnoremap <silent> <esc> :noh<return><esc>
+" unset/clear the "last search pattern" by hitting return
+nnoremap <silent> <CR> :noh<CR><CR>
