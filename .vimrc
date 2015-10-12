@@ -125,3 +125,5 @@ highlight clear SignColumn
 " work around capitalisation issue with LogiPat
 " http://stackoverflow.com/questions/31695455/vim-how-do-i-disable-the-default-logipat-plugin
 let g:loaded_logipat = 1
+" Update colour of current line
+exe "hi CursorLineNr term=bold ctermfg=3 gui=bold guifg=Yellow"

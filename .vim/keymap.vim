@@ -6,7 +6,10 @@ function! StripWhitespace()
 	call setpos('.', save_cursor)
 	call setreg('/', old_query)
 endfunction
+" Strip trailing white space (,ss)
 noremap <leader>ss :call StripWhitespace()<CR>
+" Format xml document (,fx)
+noremap <leader>fx :%!xmllint --format --recover - 2>/dev/null<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " change up and down key behaviour for wrapped lines
