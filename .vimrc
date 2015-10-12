@@ -122,3 +122,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " always show gitgutter column and fix colouring for dark solarized
 let g:gitgutter_sign_column_always = 1
 highlight clear SignColumn
+" work around capitalisation issue with LogiPat
+" http://stackoverflow.com/questions/31695455/vim-how-do-i-disable-the-default-logipat-plugin
+let g:loaded_logipat = 1
