@@ -46,3 +46,8 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 # complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Add homebrew tab autocompletion
+if which brew > /dev/null; then
+	source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+fi;
