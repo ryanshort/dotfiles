@@ -11,7 +11,7 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Format xml document (,fx)
 noremap <leader>fx :%!xmllint --format --recover - 2>/dev/null<CR>
 " Format json document (,fj)
-noremap <leader>fx :%!python -m json.tool<CR>
+noremap <leader>fj :%!python -m json.tool<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " change up and down key behaviour for wrapped lines
