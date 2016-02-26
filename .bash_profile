@@ -51,3 +51,6 @@ complete -W "NSGlobalDomain" defaults;
 if which brew > /dev/null; then
 	source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 fi;
+
+# Use vi keybinding with bash
+set -o vi
