@@ -100,6 +100,9 @@ set scrolloff=5
 set linebreak
 " set fileformats to preference unix over dos
 set fileformats=unix,dos
+" more sensible split behaviour
+set splitbelow
+set splitright
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
