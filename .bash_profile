@@ -50,7 +50,7 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add homebrew tab autocompletion
 if which brew > /dev/null; then
-	source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+	source $(brew --prefix)/etc/bash_completion.d/brew
 fi;
 
 # Use vi keybinding with bash
