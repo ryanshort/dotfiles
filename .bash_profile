@@ -38,7 +38,7 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-if which brew 2> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+if command -v brew >/dev/null 2>&1 && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
@@ -60,7 +60,7 @@ complete -W "NSGlobalDomain" defaults;
 # complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # Add homebrew tab autocompletion
-if which brew > /dev/null; then
+if command -v brew >/dev/null 2>&1; then
 	source $(brew --prefix)/etc/bash_completion.d/brew
 fi;
 
