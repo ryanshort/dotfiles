@@ -9,6 +9,17 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
+# Attach to existing tmux session if existing
+if [[ -z "$TMUX" ]] && [[ -n "$TMUX_NAME" ]] ; then
+	ID="`tmux ls 2> /dev/null | grep $TMUX_NAME | cut -d: -f1`"
+	if [[ -z "$ID" ]] ; then
+		tmux new-session -s "$TMUX_NAME"
+	else
+		tmux attach-session -t "$ID"
+	fi
+fi
+unset ID;
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
