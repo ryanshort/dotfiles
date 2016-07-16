@@ -48,3 +48,5 @@ cmap w!! w !sudo tee % >/dev/null
 nnoremap <silent> <CR> :noh<CR><CR>
 " set F2 to toggle paste mode
 set pastetoggle=<F2>
+" search for visually selected text
+vnoremap // y/<C-R>"<CR>
