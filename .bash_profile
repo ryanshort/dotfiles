@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export PATH="/usr/local/opt/openssl/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -59,6 +60,9 @@ complete -W "NSGlobalDomain" defaults;
 # complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # Add homebrew tab autocompletion
-if which brew 2> /dev/null; then
-	source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+if which brew > /dev/null; then
+	source $(brew --prefix)/etc/bash_completion.d/brew
 fi;
+
+# Use vi keybinding with bash
+set -o vi

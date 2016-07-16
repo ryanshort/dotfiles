@@ -55,7 +55,7 @@
 
 	# Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	dm = "!git branch --merged master | grep -v 'master' | xargs -n 1 git branch -d"
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
@@ -71,6 +71,13 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+
+	# Fetch the branch from a pull request into a new branch
+	prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; }; f"
+
+	# show list of files in specified commit
+	# source: http://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
+	ls = "!f() { git diff-tree --no-commit-id --name-only -r $1; }; f"
 
 [apply]
 
@@ -131,6 +138,11 @@
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
 
+[difftool]
+
+	tool = vimdiff
+	prompt = false
+
 [help]
 
 	# Automatically correct and execute mistyped commands
@@ -171,9 +183,3 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
