@@ -131,6 +131,11 @@
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
 
+[difftool]
+
+	tool = vimdiff
+	prompt = false
+
 [help]
 
 	# Automatically correct and execute mistyped commands
