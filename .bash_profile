@@ -60,7 +60,7 @@ complete -W "NSGlobalDomain" defaults;
 # complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # Add homebrew tab autocompletion
-if which brew > /dev/null; then
+if which brew 2> /dev/null; then
 	source $(brew --prefix)/etc/bash_completion.d/brew
 fi;
 
