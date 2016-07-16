@@ -72,6 +72,9 @@
 		fi \
 	}; f"
 
+	# Fetch the branch from a pull request into a new branch
+	prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; }; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
