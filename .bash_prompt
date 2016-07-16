@@ -107,8 +107,8 @@ fi;
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline
 PS1+="\[${userStyle}\]\u"; # username
-# Only show hostname when connected via SSH.
-if [[ "${SSH_TTY}" ]]; then
+# Only show hostname when connected via SSH and not in TMUX
+if [[ "${SSH_TTY}" ]] && [[ -z "${TMUX}" ]]; then
 	PS1+="\[${white}\] at ";
 	PS1+="\[${hostStyle}\]\h"; # host
 fi;
