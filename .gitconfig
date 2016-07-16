@@ -75,6 +75,10 @@
 	# Fetch the branch from a pull request into a new branch
 	prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; }; f"
 
+	# show list of files in specified commit
+	# source: http://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
+	ls = "!f() { git diff-tree --no-commit-id --name-only -r $1; }; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
