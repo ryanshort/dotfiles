@@ -46,3 +46,5 @@ noremap <right> <nop>
 cmap w!! w !sudo tee % >/dev/null
 " unset/clear the "last search pattern" by hitting return
 nnoremap <silent> <CR> :noh<CR><CR>
+" set F2 to toggle paste mode
+set pastetoggle=<F2>
