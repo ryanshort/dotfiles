@@ -13,6 +13,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'docunext/closetag.vim'
 Plugin 'rodjek/vim-puppet'
+Plugin 'scrooloose/syntastic'
+" Plugin 'vim-scripts/dbext.vim'
+" Plugin 'rykka/riv.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -132,3 +135,13 @@ highlight clear SignColumn
 let g:loaded_logipat = 1
 " Update colour of current line
 exe "hi CursorLineNr term=bold ctermfg=3 gui=bold guifg=Yellow"
+
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
