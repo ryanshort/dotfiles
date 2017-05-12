@@ -18,6 +18,9 @@ Plugin 'scrooloose/syntastic'
 " Plugin 'rykka/riv.vim'
 call vundle#end()
 filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Use the Solarized Dark theme
 set background=dark
