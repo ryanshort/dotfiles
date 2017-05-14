@@ -77,3 +77,8 @@ export LESS_TERMCAP_us=$'\e'"[1;32m"
 
 # Sierra requires ssh-add to be run when starting the shell
 ssh-add -A 2>/dev/null;
+
+# Python from pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+pyenv virtualenvwrapper
