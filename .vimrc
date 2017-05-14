@@ -14,6 +14,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'docunext/closetag.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/syntastic'
+Plugin 'davidhalter/jedi-vim'
 " Plugin 'vim-scripts/dbext.vim'
 " Plugin 'rykka/riv.vim'
 call vundle#end()
