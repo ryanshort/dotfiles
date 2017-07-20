@@ -82,3 +82,4 @@ ssh-add -A 2>/dev/null;
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 if which pyenv > /dev/null; then eval"$(pyenv virtualenvwrapper)"; fi
+export PYTHONSTARTUP=~/.pythonrc
